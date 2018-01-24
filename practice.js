@@ -17,7 +17,9 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
+function first(arr){
+return arr[0];
+}
 
 
 
@@ -32,7 +34,10 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
+function last(arr){
+  return arr[2];
+  }
+  
 
 
 
@@ -47,7 +52,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
+function looper(family){
+for(let i = 0;i<family.length;i++){
+  alert(family[i]);
+}
+}
 
 
 
@@ -61,8 +70,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Write a function called reversedLooper that is given letters as it's only argument. 
   Loop through the given array backwards alerting every item in the array starting at the end.\
 */
-
-//Code Here
+function reversedLooper(letters){
+for(let i = letters.length -1 ; i>=0;i--){
+  alert(letters[i]);
+}
+}
 
 
 
@@ -77,7 +89,16 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return only the even numbers from the array.
 */
 
-//Code Here
+
+function evenFinder(nums){
+  let newarr =[];
+for(let i =0;i<nums.length;i++){
+  if (nums[i] % 2 == 0){
+   newarr.push(nums[i]);
+  }
+ }
+ return newarr;
+}
 
 
 
@@ -94,7 +115,30 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray){
+let even = [];
+let odd = [];
+
+   for(let i = 0; i < numbersArray.length;i++){
+     if(numbersArray[i] % 2 === 0 )
+     {
+        even.push(numbersArray[i]);
+     }
+  else {
+  
+ odd.push(numbersArray[i]);
+    }
+  }
+  
+  
+return [even,odd];  
+}
+
+// [ arr1, arr2]
+
+
+  
+
 
 
 
@@ -114,8 +158,29 @@ var getRandomArbitrary = function() {
   Loop through the array (that will be passed in as a parameter) to see if that random number is in the array. 
   If it is, return true, if it's not, return false
 */
+var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
-//Code Here
+function finder(arr){
+let randoNum = getRandomArbitrary()
+
+// if(arr.indexOf(randoNum) > -1) {
+//   return true
+// }
+// return false
+
+// arr.map((el, i, arr) => {
+//   console.log(el)
+// })
+
+  for(let i = 0; i < arr.length; i++){
+    console.log('loop', arr[i], randoNum)
+    if(arr[i] === randoNum){
+      return true
+    }
+  }
+  return false
+}
+finder(numbers)
 
 
 
@@ -143,8 +208,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem (myGroceryList,removeItem){
+for(let i = 0;i <= myGroceryList.length;i++){
+  if(removeItem === myGroceryList[i]){
+myGroceryList.splice(i,1) ;
+}
+}
+return myGroceryList;
+}
 
 
+
+function addItem(myGroceryList,addItem){
+ myGroceryList.push(addItem);
+
+    return myGroceryList;
+ 
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -152,7 +232,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker (){
+let arr=[];
+for(let i = 1;i < 216 ;i++){
+  arr.push(i);
+}
+return arr;
+}
+
 
 
 
@@ -168,7 +255,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+function addTen(numbers){
+  console.log('hi',numbers)
+for(let i = 0;i < numbers.length;i++){
+  numbers[i] = parseInt(numbers[i]) + 10;
+}
+return numbers;
+}
 
 
 
