@@ -286,7 +286,18 @@ for(var i = 0; i < num2; i++){
   Return the array which is longest.
 */
 
-//Code Here
+function longer(arr1,arr2){
+  
+  let longestarr = [];
+ 
+  if (arr1 >= arr2){
+    longestarr.push(arr1);
+  }
+  else if (arr1 <= arr2){
+    longestarr.push(arr2);
+  }
+return longestarr;
+}
 
 
 
